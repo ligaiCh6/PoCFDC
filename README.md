@@ -1,3 +1,32 @@
+Problem Statement:
+
+Need a RESTful API where user gives a web url and expects to get the number of words in that webpage.
+ 
+Code to develop:
+
+Will have the above stated problem solved using 2 RESTful endpoints.
+
+Restful endpoint – 1: 
+Input: web url 
+Output: A unique id
+Description: Reads web url from the request and returns a "unique id" which can be referenced by the client
+sample request url : http://localhost:8080/fdctest/url/www.example.com
+sample reply in json: { “id”:”123456”}
+ 
+Restful endpoint – 2:
+Input:  "unique id" 
+Output: word count
+Description: Reads the "unique id" from the request and returns the number of words of that "unique id".
+sample request url: http://localhost:8080/fdctest/count/123456
+sample reply in json: { “count”: “100”}
+
+All code has to be written in python.
+
+
+-------------------------------
+Writup of solution 
+
+
 The code is running on a public server for the next 48 hours. The endpoints are here:
 
 $ curl 54.177.191.172:23231/fdctest/url/http://catless.ncl.ac.uk/Risks/28.55.html
